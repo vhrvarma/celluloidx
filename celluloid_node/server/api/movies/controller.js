@@ -188,11 +188,25 @@ let uploadCastPic = (req,res) => {
    
 }
     
+let getMyFilms = (req,res) => {
+
+    moviesCollection.find({userId: req.jwt.id})
+     .then(
+         (response) => {
+            res.status(200).json({status: true,message: "your movies",data:response})
+         }
+     ) .catch(
+        (err) => {
+            res.status(400).json({status: false,message: err});
+          }
+     )
+}
 
 
 module.exports = {
     uploadMovie,
     uploadTrailer,
     addFilmDetails,
-    uploadCastPic
+    uploadCastPic,
+    getMyFilms
 }

@@ -7,8 +7,8 @@ const AWS = require('aws-sdk');
 let fs = require('fs');
 let s3 = new AWS.S3({
     apiVersion: '2006-03-01',
-    accessKeyId: "AKIAI3KYSGEJNHGXZ5GQ",
-    secretAccessKey: "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",
+    accessKeyId: "",
+    secretAccessKey: "",
     region: "ap-southeast-1"
 });
 
